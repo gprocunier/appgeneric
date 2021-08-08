@@ -1,0 +1,10 @@
+apiVersion: tower.ansible.com/v1alpha1
+kind: AnsibleJob
+metadata:
+  name: call_ansible_job
+spec:
+  extra_vars:
+    data: "This job was called as part of the deployment of appgeneric"
+  job_template_name: ACM-Hook-Test
+  tower_auth_secret: controller-admin
+

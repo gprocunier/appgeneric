@@ -1,7 +1,11 @@
+---
 apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleJob
 metadata:
-  name: call-ansible-job-post
+  name: call-ansible-job-pre
+  namespace: ggithubcom-gprocunier-appgeneric
+  labels:
+    app.kubernetes.io/name: appgeneric
 spec:
   extra_vars:
     data: "This job was called as part of the post_hook deployment of appgeneric"
